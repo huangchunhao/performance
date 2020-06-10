@@ -115,6 +115,7 @@ class SiChuangQuanYiJinZiYouZiJin extends Simulation {
           println(session("seller_usrIdCard_sa").as[String])
           var conn: Connection = DBUtils.conn("172.20.0.87", "3306", "fintech_test", "hbfintech_test", "hbfintech_test123")
           val statement: Statement = conn.createStatement
+          //https://blog.csdn.net/yljphp/article/details/88865871
           val resInsert = statement.executeUpdate("INSERT INTO `fintech_test`.`debit_route_white_list`( `user_name`, `phone_no`, `province_id`, `province_name`, `oper_id`, `oper_name`, `update_oper_id`, `update_oper_name`, `create_time`, `update_time`, `debit`, `valid`, `product_type`) VALUES ( '" + session("name").as[String] + "', '" + session("mobile").as[String] + "', '4054', '江苏省', 0, '系统', NULL, NULL, '2020-03-20 00:48:03', '2020-03-20 00:48:03', 0, b'0', 7)")
           DBUtils.close(conn)
           session
