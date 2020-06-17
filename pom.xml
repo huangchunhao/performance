@@ -61,7 +61,7 @@
                 <version>3.0.1</version>
                 <configuration>
                     <!-- 测试脚本 -->
-                    <simulationClass>computerdatabase.SiChuangQuanYiJinZiYouZiJin</simulationClass>
+                    <simulationClass>computerdatabase.NBCBStatus</simulationClass>
                     <!-- 结果输出地址 -->
                     <resultsFolder>E:\Y_javadev\GIT\performance\scala\report</resultsFolder>
                     <disableCompiler>true</disableCompiler>
